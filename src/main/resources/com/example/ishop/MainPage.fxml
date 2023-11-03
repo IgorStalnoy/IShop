@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ishop.controller.page_controllers.MainPageController">
+    <Label fx:id="loggedCustomerInfo" layoutX="590.0" layoutY="18.0" prefHeight="17.0" prefWidth="85.0"/>
+    <Label fx:id="infoMessage" layoutX="297.0" layoutY="492.0" prefHeight="17.0" prefWidth="258.0"/>
+    <Button fx:id="goToLogInPageButton" layoutX="650.0" layoutY="14.0" mnemonicParsing="false"
+            onAction="#goToLogInScreenScreen" text="goToLogInPage"/>
+    <Button fx:id="orderByPriceButton" layoutX="22.0" layoutY="488.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByPrice"/>
+    <Button fx:id="orderByModelButton" layoutX="17.0" layoutY="514.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByModel"/>
+    <Button fx:id="orderByIdButton" layoutX="18.0" layoutY="539.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderById"/>
+    <Button fx:id="orderByCategoryButton" layoutX="18.0" layoutY="564.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByCategory"/>
+    <Button fx:id="orderByCountButton" layoutX="18.0" layoutY="589.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByCount"/>
+    <Button fx:id="logOutButton" layoutX="691.0" layoutY="14.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#logOut" text="Log Out" visible="false"/>
+    <Button fx:id="goToPrivateAccountPageButton" layoutX="624.0" layoutY="14.0" maxHeight="20.0" maxWidth="200.0"
+            mnemonicParsing="false" onAction="#goToPrivateAccountPage" text="My IShop" visible="false"/>
+    <ListView fx:id="productsListView" layoutX="5.0" layoutY="88.0" maxHeight="400.0" minHeight="300.0"
+              minWidth="600.0" onMouseClicked="#goProductPage" prefHeight="400.0" prefWidth="758.0"/>
+    <Button layoutX="18.0" layoutY="23.0" mnemonicParsing="false" onAction="#goToCartPage" text="Cart"/>
+</AnchorPane>

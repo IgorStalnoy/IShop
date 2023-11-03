@@ -1,0 +1,57 @@
+1,2g,1000d,15,Sofa hgfj345,leather,red
+1,2,5211,887,Armchair hfgfg234,leather,red
+1,2,14535,65,Shelf jjf345,цwood,yellow
+1,2,4111,654,Cupboard jgf234,leather,grey
+1,2,1435,34,Shelf jhg234,leather,black
+1,2,1435,45,Cupboard ghjgh234,цwood,yellow
+1,2,1435,55,Armchair hjg234,leather,black
+1,2,11,58,Table hfdgd,jhg234,red
+1,2,1241,51,Cupboard 32,leather,yellow
+1,2,1233,58,Armchair bhdfgd,leather,grey
+1,2,1258,35,Table 2342,цwood,black
+1,2,14235,7,Shelf gdt3,leather,yellow
+1,2,2135,56,Cupboard te2f234,цwood,yellow
+1,2,5111,55,Armchair 63g5gdf,цwood,black
+1,2,5211,56,Table hfdgd,leather,grey
+1,2,1235,5,Shelf 32342,цwood,yellow
+1,2,4121,556,Shelf hfh234,цwood,yellow
+1,2,4121,532,Shelf hfdgd,leather,grey
+1,2,21415,65,Shelf hfdgd,leather,red
+1,2,1235,562,Shelf gfd123,цwood,grey
+1,2,3144,532,Cupboard hfdgd,leather,black
+1,2,22,55,Table hfdgd,leather,yellow
+1,2,765,225,Sofa jhghd,leather,black
+1,3,1000,21,Floor cleaner,Muscul,for washing floors,average
+1,3,5211,52,Washing powder,Tide,for washing clothes,strong
+1,3,1435,5,Shampoo,Shaurma,for washing hair,nice
+1,3,123,521,Toothpaste,Colgate,for brushing teeth,no nice
+1,3,23,345,Toothpaste,Blendamed,for brushing teeth,no nice
+1,3,52,2355,Toothpaste,Blendamed,for brushing teeth,no smell
+1,3,51,673,Washing powder,Ariel,for washing clothes,no average
+1,3,46,423,Shampoo,Pantine,for washing hair,no smell
+1,3,652,5621,Toothpaste,Blendamed,for brushing teeth,no smell
+1,3,32,886,Washing powder,Tide,for washing clothes,no strong
+1,3,315,237,Shampoo,Fructis,for washing hair,no average
+1,3,52,85634,Washing powder,Tide,for washing clothes,no smell
+1,3,79,733,Shampoo,Shaurma,for for washing hair,no smell
+1,3,33,845,Floor cleaner,Domestos,for washing floors,no nice
+1,3,3,6433,Floor cleaner,Domestos,for washing floors,no strong
+1,1,1000,5,HP,Yjkh4328,Notebook,3265,512,500
+1,1,4511,46,APPLE,hggj45fd,Notebook,5563,2048,1500
+1,1,12340,1,ASUS,ljhj443,PC,3265,1024,1024
+1,1,132130,7,APPLE,gfjhdv3435,Notebook,3265,2048,500
+1,1,1780,58,HP,jhbnvc447,PC,5563,1024,1024
+1,1,180,61,HP,gvcdv4345,Notebook,3265,1024,1024
+1,1,1780,45,ASUS,jghhf345,Notebook,5563,2048,1024
+1,1,112360,45,HP,hvbhfd345,PC,5563,1024,1500
+1,1,15740,49,ASUS,fgjvc345y,Notebook,3000,1024,500
+1,1,1786580,45,ASUS,Yj4t3kh4f328,Notebook,3000,1024,500
+1,1,19080,45,HP,bfdg,PC,3000,1024,500
+1,1,10980,12,HP,nbvdg456,Notebook,3000,512,1024
+1,1,16980,12,APPLE,vbdfger444,PC,3265,2048,1024
+1,1,1066,11,HP,fdgnf455t,Notebook,3000,1024,1500
+1,1,1450,45,ASUS,fghnvbnbfv,Notebook,3265,1024,500
+1,1,13690,4,HP,Yjkh4vchfg328,PC,5563,1024,1500
+1,1,1550,16,ASUS,nfvfsd4546,Notebook,3265,2048,500
+1,1,1470,41,HP,hfhf3,PC,3000,512,1024
+1,1,8547,2,ASUS,454353bdf,PC,3000,512,500
