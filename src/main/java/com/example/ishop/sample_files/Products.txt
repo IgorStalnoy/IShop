@@ -1,4 +1,4 @@
-1,2g,1000d,15,Sofa hgfj345,leather,red
+1,2,1000,15,Sofa hgfj345,leather,red
 1,2,5211,887,Armchair hfgfg234,leather,red
 1,2,14535,65,Shelf jjf345,цwood,yellow
 1,2,4111,654,Cupboard jgf234,leather,grey

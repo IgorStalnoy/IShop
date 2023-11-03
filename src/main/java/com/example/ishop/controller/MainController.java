@@ -60,7 +60,6 @@ public abstract class MainController {
         MainPageController mainPageController = controllerMap.get(MAIN_SCREEN).getController();
         mainPageController.setButtonsVisibility(loggedCustomer != null);
         mainPageController.setCustomersInfo(loggedCustomer);
-        mainPageController.setProductsList(productsDB.getAll());
         getStage().setScene(getScreenMap().get(MAIN_SCREEN));
     }
 

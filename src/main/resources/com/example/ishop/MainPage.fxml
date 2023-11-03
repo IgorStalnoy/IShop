@@ -1,29 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane prefHeight="1000.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ishop.controller.page_controllers.MainPageController">
-    <Label fx:id="loggedCustomerInfo" layoutX="590.0" layoutY="18.0" prefHeight="17.0" prefWidth="85.0"/>
-    <Label fx:id="infoMessage" layoutX="297.0" layoutY="492.0" prefHeight="17.0" prefWidth="258.0"/>
-    <Button fx:id="goToLogInPageButton" layoutX="650.0" layoutY="14.0" mnemonicParsing="false"
-            onAction="#goToLogInScreenScreen" text="goToLogInPage"/>
-    <Button fx:id="orderByPriceButton" layoutX="22.0" layoutY="488.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByPrice"/>
-    <Button fx:id="orderByModelButton" layoutX="17.0" layoutY="514.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByModel"/>
-    <Button fx:id="orderByIdButton" layoutX="18.0" layoutY="539.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderById"/>
-    <Button fx:id="orderByCategoryButton" layoutX="18.0" layoutY="564.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByCategory"/>
-    <Button fx:id="orderByCountButton" layoutX="18.0" layoutY="589.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#sortProductsList" text="buttonOrderByCount"/>
-    <Button fx:id="logOutButton" layoutX="691.0" layoutY="14.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#logOut" text="Log Out" visible="false"/>
-    <Button fx:id="goToPrivateAccountPageButton" layoutX="624.0" layoutY="14.0" maxHeight="20.0" maxWidth="200.0"
-            mnemonicParsing="false" onAction="#goToPrivateAccountPage" text="My IShop" visible="false"/>
-    <ListView fx:id="productsListView" layoutX="5.0" layoutY="88.0" maxHeight="400.0" minHeight="300.0"
-              minWidth="600.0" onMouseClicked="#goProductPage" prefHeight="400.0" prefWidth="758.0"/>
-    <Button layoutX="18.0" layoutY="23.0" mnemonicParsing="false" onAction="#goToCartPage" text="Cart"/>
-</AnchorPane>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minWidth="1000.0" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #D2B48C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ishop.controller.page_controllers.MainPageController">
+   <HBox alignment="CENTER_RIGHT" maxHeight="40.0" maxWidth="950.0" minHeight="40.0" minWidth="950.0" prefHeight="40.0" prefWidth="950.0" spacing="25.0" style="-fx-background-color: #F5DEB3; -fx-background-radius: 15;">
+      <children>
+          <Label fx:id="loggedCustomerInfo" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefHeight="30.0" prefWidth="300.0" textFill="#79370b">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+         </Label>
+          <Button maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#goToCartPage" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Cart" textFill="#79370b">
+            <HBox.margin>
+               <Insets left="35.0" />
+            </HBox.margin>
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+         </Button>
+          <Button fx:id="goToPrivateAccountPageButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#goToPrivateAccountPage" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="My IShop" textFill="#79370b" visible="false">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+         </Button>
+          <Button fx:id="logOutButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#logOut" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Log Out" textFill="#79370b" visible="false">
+            <HBox.margin>
+               <Insets left="25.0" />
+            </HBox.margin>
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+         </Button>
+          <Button fx:id="goToLogInPageButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#goToLogInScreenScreen" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Log In" textFill="#79370b">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+         </Button>
+      </children>
+      <VBox.margin>
+         <Insets top="40.0" />
+      </VBox.margin>
+   </HBox>
+   <HBox alignment="CENTER" layoutX="25.0" layoutY="48.0" maxHeight="40.0" maxWidth="950.0" minHeight="40.0" minWidth="950.0" prefHeight="40.0" prefWidth="950.0" spacing="70.0" style="-fx-background-color: #F5DEB3; -fx-background-radius: 15;" AnchorPane.topAnchor="78.0">
+      <children>
+          <Button fx:id="orderByPriceButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#sortProductsList" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-background-radius: 15; -fx-border-radius: 15;" text="Sort by Price" textFill="#79370b">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold Italic" size="13.0" />
+            </font>
+         </Button>
+          <Button fx:id="orderByModelButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#sortProductsList" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Sort by Model" textFill="#79370b">
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+          </Button>
+          <Button fx:id="orderByIdButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#sortProductsList" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-background-radius: 15; -fx-border-radius: 15;" text="Sort by Id" textFill="#79370b">
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+          </Button>
+          <Button fx:id="orderByCategoryButton" maxHeight="20.0" maxWidth="125.0" minWidth="125.0" mnemonicParsing="false" onAction="#sortProductsList" prefWidth="125.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-background-radius: 15; -fx-border-radius: 15;" text="Sort by Category" textFill="#79370b">
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+          </Button>
+          <Button fx:id="orderByCountButton" maxHeight="20.0" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#sortProductsList" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-background-radius: 15; -fx-border-radius: 15;" text="Sort by Count" textFill="#79370b">
+              <font>
+                  <Font name="System Bold Italic" size="13.0" />
+              </font>
+          </Button>
+      </children>
+      <VBox.margin>
+         <Insets top="30.0" />
+      </VBox.margin></HBox>
+    <Label fx:id="infoMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="62.0" maxHeight="25.0" maxWidth="600.0" minHeight="25.0" minWidth="600.0" prefHeight="25.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED">
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin></Label>
+    <ListView fx:id="productsListView" layoutX="5.0" layoutY="88.0" maxHeight="400.0" maxWidth="950.0" minHeight="300.0" minWidth="950.0" onMouseClicked="#goProductPage" prefHeight="400.0" prefWidth="950.0" style="-fx-background-color: #FFF8DC; -fx-background-radius: 10;" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="138.0">
+      <VBox.margin>
+         <Insets top="20.0" />
+      </VBox.margin></ListView>
+</VBox>

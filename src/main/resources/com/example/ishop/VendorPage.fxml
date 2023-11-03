@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ishop.controller.page_controllers.VendorPageController">
+<VBox alignment="TOP_CENTER" minWidth="1000.0" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #D2B48C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ishop.controller.page_controllers.VendorPageController">
+   <HBox alignment="CENTER" layoutX="25.0" layoutY="48.0" maxHeight="40.0" maxWidth="950.0" minHeight="40.0" minWidth="950.0" prefHeight="40.0" prefWidth="950.0" spacing="270.0" style="-fx-background-color: #F5DEB3; -fx-background-radius: 15;" AnchorPane.topAnchor="78.0">
+      <children>
+          <Button fx:id="goToLogInPage" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#goToLogInPage" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="LogIn page">
+              <font>
+                  <Font name="System Bold Italic" size="14.0" />
+              </font>
+          </Button>
+          <Button fx:id="fileOpenButton" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#loadFile" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Load file" visible="false">
+              <font>
+                  <Font name="System Bold Italic" size="14.0" />
+              </font>
+          </Button>
+          <Button fx:id="goToMainPage" maxWidth="120.0" minWidth="120.0" mnemonicParsing="false" onAction="#goToMainPage" prefWidth="120.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Main page" visible="false">
+              <font>
+                  <Font name="System Bold Italic" size="14.0" />
+              </font>
+          </Button>
+      </children>
+      <VBox.margin>
+         <Insets bottom="120.0" top="60.0" />
+      </VBox.margin></HBox>
 
-    <Label fx:id="infoMessage" layoutX="175.0" layoutY="235.0" prefHeight="17.0" prefWidth="250.0" visible="false"/>
-    <Label fx:id="vendorPasswordInfoMessage" layoutX="20.0" layoutY="104.0" prefHeight="17.0" prefWidth="228.0"/>
-    <TextField fx:id="vendorPasswordField" layoutX="20.0" layoutY="62.0" onKeyPressed="#vendorPasswordInput"/>
-    <Button fx:id="fileOpenButton" layoutX="396.0" layoutY="152.0" mnemonicParsing="false" onAction="#loadFile"
-            text="Load file" visible="false"/>
-    <Button fx:id="goToMainPage" layoutX="500.0" layoutY="152.0" mnemonicParsing="false" onAction="#goToMainPage"
-            text="goToMainPage" visible="false"/>
-    <Button fx:id="goToLogInPage" layoutX="500.0" layoutY="300.0" mnemonicParsing="false" onAction="#goToLogInPage"
-            text="goToLogInPage"/>
-</AnchorPane>
+    <Label fx:id="infoMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="62.0" maxHeight="25.0" maxWidth="600.0" minHeight="25.0" minWidth="600.0" prefHeight="25.0" prefWidth="600.0" textAlignment="CENTER" textFill="GREEN" visible="false">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+      <VBox.margin>
+         <Insets bottom="100.0" />
+      </VBox.margin>
+    </Label>
+    <TextField fx:id="vendorPasswordField" layoutX="159.0" layoutY="58.0" maxHeight="30.0" maxWidth="400.0" minHeight="30.0" minWidth="400.0" onKeyPressed="#vendorPasswordInput" prefHeight="30.0" prefWidth="400.0" style="-fx-background-color: #FFF8DC; -fx-background-radius: 10;">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </TextField>
+    <Label fx:id="vendorPasswordInfoMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="62.0" maxHeight="25.0" maxWidth="600.0" minHeight="25.0" minWidth="600.0" prefHeight="25.0" prefWidth="600.0" textAlignment="CENTER" textFill="RED">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </Label>
+</VBox>

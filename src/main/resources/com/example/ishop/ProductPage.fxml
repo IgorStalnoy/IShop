@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.ishop.controller.page_controllers.ProductPageController">
-    <Label fx:id="label" layoutX="1.0" layoutY="1.0" prefHeight="17.0" prefWidth="1055.0"/>
-    <Label fx:id="infoMessage" layoutX="14.0" layoutY="79.0" prefHeight="1.0" prefWidth="800.0"/>
-    <Button fx:id="goToMainScreen" layoutX="1.0" layoutY="30.0" mnemonicParsing="false" onAction="#goToMainPage"
-            text="GoToMainScreen"/>
-    <Button fx:id="addToCart" layoutX="150.0" layoutY="30.0" mnemonicParsing="false" onAction="#addProduct"
-            text="AddToCart"/>
-</AnchorPane>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minWidth="1000.0" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: #D2B48C;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ishop.controller.page_controllers.ProductPageController">
+   <HBox alignment="CENTER" maxHeight="40.0" maxWidth="950.0" minHeight="40.0" minWidth="950.0" prefHeight="40.0" prefWidth="950.0" spacing="650.0" style="-fx-background-color: #F5DEB3; -fx-background-radius: 15;">
+      <children>
+          <Button fx:id="addToCart" maxHeight="20.0" maxWidth="135.0" minWidth="135.0" mnemonicParsing="false" onAction="#addProduct" prefWidth="135.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="AddToCart">
+              <font>
+                  <Font name="System Bold Italic" size="14.0" />
+              </font>
+          </Button>
+          <Button fx:id="goToMainScreen" maxHeight="20.0" maxWidth="135.0" minWidth="135.0" mnemonicParsing="false" onAction="#goToMainPage" prefWidth="135.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Main page">
+              <font>
+                  <Font name="System Bold Italic" size="14.0" />
+              </font>
+          </Button>
+      </children>
+      <VBox.margin>
+         <Insets bottom="200.0" top="60.0" />
+      </VBox.margin></HBox>
+    <Label fx:id="label" alignment="CENTER" maxHeight="40.0" maxWidth="800.0" minHeight="40.0" minWidth="800.0" prefHeight="40.0" prefWidth="800.0" style="-fx-background-color: #FFF8DC; -fx-background-radius: 15;">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="infoMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="62.0" maxHeight="25.0" maxWidth="600.0" minHeight="25.0" minWidth="600.0" prefHeight="25.0" prefWidth="600.0" textAlignment="CENTER" textFill="GREEN">
+        <font>
+            <Font name="System Bold Italic" size="14.0" />
+        </font>
+    </Label>
+</VBox>

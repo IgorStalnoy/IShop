@@ -11,6 +11,7 @@
          <Insets bottom="45.0" top="25.0" />
       </VBox.margin>
       <children>
+      
           <Button fx:id="goToMainScreenButton" maxHeight="20.0" maxWidth="135.0" minWidth="135.0" mnemonicParsing="false" onAction="#goToMainScreen" prefWidth="135.0" style="-fx-background-color: #DAA520; -fx-border-color: #B8860B; -fx-border-radius: 15; -fx-background-radius: 15;" text="Main page">
               <font>
                   <Font name="System Bold Italic" size="13.0" />

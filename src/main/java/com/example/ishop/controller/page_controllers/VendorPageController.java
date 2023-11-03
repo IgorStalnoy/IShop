@@ -7,8 +7,7 @@ import com.example.ishop.model.Product.Computer;
 import com.example.ishop.model.Product.Furniture;
 import com.example.ishop.model.Product.HouseholdChemicals;
 import com.example.ishop.model.Product.Product;
-import javafx.animation.PauseTransition;
-import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,7 +16,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
-import javafx.util.Duration;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -46,60 +44,65 @@ public class VendorPageController extends MainController {
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
         fileChooser.getExtensionFilters().add(extFilter);
         File file = fileChooser.showOpenDialog(getStage());
-        List<Product> productsList = new ArrayList<>();
-        Platform.runLater(() -> {
-            try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    String[] values = line.split(",");
-                    try {
-                        if (Integer.parseInt(values[1]) == 1) {
-                            int categoryID = Integer.parseInt(values[1]);
-                            int price = Integer.parseInt(values[2]);
-                            int count = Integer.parseInt(values[3]);
-                            String model = values[5];
-                            String brand = values[4];
-                            String type = values[6];
-                            int processorSpeed = Integer.parseInt(values[7]);
-                            int ramSize = Integer.parseInt(values[8]);
-                            int hddSize = Integer.parseInt(values[9]);
-                            Product product = new Computer(1, categoryID, price, count, model, brand, type, processorSpeed, ramSize, hddSize);
-                            productsList.add(product);
-                        } else if (Integer.parseInt(values[1]) == 2) {
-                            int categoryID = Integer.parseInt(values[1]);
-                            int price = Integer.parseInt(values[2]);
-                            int count = Integer.parseInt(values[3]);
-                            String model = values[4];
-                            String material = values[5];
-                            String color = values[6];
-                            Product product = new Furniture(1, categoryID, price, count, model, material, color);
-                            productsList.add(product);
-                        } else if (Integer.parseInt(values[1]) == 3) {
-                            int categoryID = Integer.parseInt(values[1]);
-                            int price = Integer.parseInt(values[2]);
-                            int count = Integer.parseInt(values[3]);
-                            String model = values[4];
-                            String brand = values[5];
-                            String appointment = values[6];
-                            String smell = values[7];
-                            Product product = new HouseholdChemicals(1, categoryID, price, count, model, brand, appointment, smell);
-                            productsList.add(product);
+        Task<Void> task = new Task<>() {
+            @Override
+            public Void call() {
+                try {
+                    List<Product> productsList = new ArrayList<>();
+                    try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            String[] values = line.split(",");
+                            try {
+                                if (Integer.parseInt(values[1]) == 1) {
+                                    System.out.println(Thread.currentThread().getName());
+                                    int categoryID = Integer.parseInt(values[1]);
+                                    int price = Integer.parseInt(values[2]);
+                                    int count = Integer.parseInt(values[3]);
+                                    String model = values[5];
+                                    String brand = values[4];
+                                    String type = values[6];
+                                    int processorSpeed = Integer.parseInt(values[7]);
+                                    int ramSize = Integer.parseInt(values[8]);
+                                    int hddSize = Integer.parseInt(values[9]);
+                                    Product product = new Computer(1, categoryID, price, count, model, brand, type, processorSpeed, ramSize, hddSize);
+                                    productsList.add(product);
+                                } else if (Integer.parseInt(values[1]) == 2) {
+                                    int categoryID = Integer.parseInt(values[1]);
+                                    int price = Integer.parseInt(values[2]);
+                                    int count = Integer.parseInt(values[3]);
+                                    String model = values[4];
+                                    String material = values[5];
+                                    String color = values[6];
+                                    Product product = new Furniture(1, categoryID, price, count, model, material, color);
+                                    productsList.add(product);
+                                } else if (Integer.parseInt(values[1]) == 3) {
+                                    int categoryID = Integer.parseInt(values[1]);
+                                    int price = Integer.parseInt(values[2]);
+                                    int count = Integer.parseInt(values[3]);
+                                    String model = values[4];
+                                    String brand = values[5];
+                                    String appointment = values[6];
+                                    String smell = values[7];
+                                    Product product = new HouseholdChemicals(1, categoryID, price, count, model, brand, appointment, smell);
+                                    productsList.add(product);
+                                }
+                            } catch (RuntimeException e) {
+                                e.printStackTrace();
+                            }
                         }
-                    } catch (RuntimeException e) {
-                        infoMessage.setTextFill(Color.RED);
-                        infoMessage.setText("Invalid data, please check your file");
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
+                    productsDB.saveAll(productsList);
+                } catch (IllegalStateException e) {
+                    System.out.println(" ");
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
+                return null;
             }
-            productsDB.saveAll(productsList);
-            infoMessage.setTextFill(Color.BLACK);
-            infoMessage.setText("Products wat successfully added");
-            PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
-            pause.setOnFinished(e -> infoMessage.setText(""));
-            pause.play();
-        });
+        };
+        Thread thread = new Thread(task);
+        thread.start();
     }
 
     public void clearMessages() {
